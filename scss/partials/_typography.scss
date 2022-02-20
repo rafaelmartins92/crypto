@@ -1,0 +1,103 @@
+@mixin typeface-body($size, $device) {
+  // large
+  @if $size == large and $device == desktop {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  } @else if $size == large and $device == mobile {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  // default
+  @if $size == default and $device == desktop {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  } @else if $size == default and $device == mobile {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+
+  // small
+  @if $size == small and $device == desktop {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  } @else if $size == small and $device == mobile {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+
+  // caption
+  @if $size == caption and $device == desktop {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  } @else if $size == caption and $device == mobile {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  
+  // subtitle
+  @if $size == subtitle and $device == desktop {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+  } @else if $size == subtitle and $device == mobile {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+  }
+}
+
+h1 {
+  font-size: 5.6rem;
+  line-height: 6.4rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+  line-height: 5.6rem;
+}
+
+h3 {
+  font-size: 4rem;
+  line-height: 4.8rem;
+}
+
+h4 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+}
+
+h5 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+h6 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+p {
+  @include typeface-body(default, mobile);
+
+  &.large {
+    @include typeface-body(large, mobile);
+  }
+  &.small {
+    @include typeface-body(small, mobile);
+  }
+  &.caption {
+    @include typeface-body(caption, mobile);
+  }
+  &.subtitle {
+    @include typeface-body(subtitle, mobile);
+    font-weight: 500;
+  }
+}
