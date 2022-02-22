@@ -1,0 +1,54 @@
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  width: 100%;
+  background: $background;
+  border: 2px solid $border;
+
+  > img {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    border: none;
+    box-shadow: -1px 0 0 2px rgba(154, 77, 255, 1),
+      -1px -1px 0 2px rgba(154, 77, 255, 1),
+      -1px -1px 0 2px rgba(154, 77, 255, 1), 0 -1px 0 2px rgba(154, 77, 255, 1),
+      0 1px 0 2px rgba(246, 0, 221, 1), 1px -1px 0 2px rgba(246, 0, 221, 1),
+      1px 1px 0 2px rgba(246, 0, 221, 1), 1px 0 0 2px rgba(246, 0, 221, 1);
+  }
+}
+
+.input-wrapper {
+  display: flex;
+
+  img {
+    filter: brightness(0) invert(1);
+    margin-right: 0.8rem;
+  }
+
+  input {
+    background: $background;
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: rgba(239, 239, 255, 0.5);
+  }
+
+  &:hover {
+    img {
+      filter: none;
+    }
+
+    input {
+      color: $white;
+
+      &::placeholder {
+        color: $white;
+      }
+    }
+  }
+}

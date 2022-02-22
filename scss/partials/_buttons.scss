@@ -6,14 +6,11 @@ button {
   font-size: 1.6rem;
   line-height: 2rem;
   color: $white;
-
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1.2rem 0.8rem;
-
   width: 100%;
-
   border-radius: $border-radius;
 
   &.small {
@@ -25,36 +22,37 @@ button {
     font-size: 1.8rem;
     line-height: 2.4rem;
   }
-}
 
-.primary {
-  background: $gradient-1;
+  &.primary {
+    background: $gradient-1;
 
-  &:hover {
-    background: none;
+    &:hover {
+      background: none;
+      box-shadow: -1px 0 0 2px rgba(154, 77, 255, 1),
+        -1px -1px 0 2px rgba(154, 77, 255, 1),
+        -1px -1px 0 2px rgba(154, 77, 255, 1),
+        0 -1px 0 2px rgba(154, 77, 255, 1), 0 1px 0 2px rgba(246, 0, 221, 1),
+        1px -1px 0 2px rgba(246, 0, 221, 1), 1px 1px 0 2px rgba(246, 0, 221, 1),
+        1px 0 0 2px rgba(246, 0, 221, 1);
+    }
+  }
+
+  &.secondary {
     box-shadow: -1px 0 0 2px rgba(154, 77, 255, 1),
       -1px -1px 0 2px rgba(154, 77, 255, 1),
       -1px -1px 0 2px rgba(154, 77, 255, 1), 0 -1px 0 2px rgba(154, 77, 255, 1),
       0 1px 0 2px rgba(246, 0, 221, 1), 1px -1px 0 2px rgba(246, 0, 221, 1),
       1px 1px 0 2px rgba(246, 0, 221, 1), 1px 0 0 2px rgba(246, 0, 221, 1);
+
+    &:hover {
+      background: $gradient-1;
+      box-shadow: none;
+    }
   }
-}
 
-.secondary {
-  box-shadow: -1px 0 0 2px rgba(154, 77, 255, 1),
-    -1px -1px 0 2px rgba(154, 77, 255, 1), -1px -1px 0 2px rgba(154, 77, 255, 1),
-    0 -1px 0 2px rgba(154, 77, 255, 1), 0 1px 0 2px rgba(246, 0, 221, 1),
-    1px -1px 0 2px rgba(246, 0, 221, 1), 1px 1px 0 2px rgba(246, 0, 221, 1),
-    1px 0 0 2px rgba(246, 0, 221, 1);
-
-  &:hover {
-    background: $gradient-1;
-    box-shadow: none;
-  }
-}
-
-.icon {
-  span {
-    margin-right: 1.2rem;
+  &.icon {
+    span {
+      margin-right: 1.2rem;
+    }
   }
 }
