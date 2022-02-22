@@ -1,0 +1,61 @@
+$border-width: 2px;
+$border-radius: 12px;
+
+button {
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: $white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 8px;
+
+  width: 262px;
+  height: 44px;
+
+  border-radius: $border-radius;
+
+  &.small {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  &.large {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+}
+
+.primary {
+  background: $gradient-1;
+
+  &:hover {
+    background: none;
+    box-shadow: -1px 0 0 2px rgba(154, 77, 255, 1),
+      -1px -1px 0 2px rgba(154, 77, 255, 1),
+      -1px -1px 0 2px rgba(154, 77, 255, 1), 0 -1px 0 2px rgba(154, 77, 255, 1),
+      0 1px 0 2px rgba(246, 0, 221, 1), 1px -1px 0 2px rgba(246, 0, 221, 1),
+      1px 1px 0 2px rgba(246, 0, 221, 1), 1px 0 0 2px rgba(246, 0, 221, 1);
+  }
+}
+
+.secondary {
+  box-shadow: -1px 0 0 2px rgba(154, 77, 255, 1),
+    -1px -1px 0 2px rgba(154, 77, 255, 1), -1px -1px 0 2px rgba(154, 77, 255, 1),
+    0 -1px 0 2px rgba(154, 77, 255, 1), 0 1px 0 2px rgba(246, 0, 221, 1),
+    1px -1px 0 2px rgba(246, 0, 221, 1), 1px 1px 0 2px rgba(246, 0, 221, 1),
+    1px 0 0 2px rgba(246, 0, 221, 1);
+
+  &:hover {
+    background: $gradient-1;
+    box-shadow: none;
+  }
+}
+
+.icon {
+  span {
+    margin-right: 12px;
+  }
+}

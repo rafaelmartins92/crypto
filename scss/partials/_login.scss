@@ -1,0 +1,21 @@
+.ellipse-top {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  left: 284px;
+  top: -124px;
+  background: $primary-500;
+  filter: blur(300px);
+  border-radius: 50%;
+}
+
+.ellipse-bottom {
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  left: -181px;
+  top: 668px;
+  background: $primary-500;
+  filter: blur(300px);
+  border-radius: 50%;
+}

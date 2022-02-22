@@ -21,7 +21,12 @@ button {
 
 html,
 body {
-  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow: hidden;
+  background-color: #211d28;
 }
 
 html {
@@ -91,5 +96,84 @@ p.subtitle {
   font-size: 1.6rem;
   line-height: 1.9rem;
   font-weight: 500;
+}
+
+button {
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 8px;
+  width: 262px;
+  height: 44px;
+  border-radius: 12px;
+}
+
+button.small {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+button.large {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+.primary {
+  background: linear-gradient(135deg, #9a4dff 0%, #f600dd 100%);
+}
+
+.primary:hover {
+  background: none;
+  -webkit-box-shadow: -1px 0 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, 0 -1px 0 2px #9a4dff, 0 1px 0 2px #f600dd, 1px -1px 0 2px #f600dd, 1px 1px 0 2px #f600dd, 1px 0 0 2px #f600dd;
+          box-shadow: -1px 0 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, 0 -1px 0 2px #9a4dff, 0 1px 0 2px #f600dd, 1px -1px 0 2px #f600dd, 1px 1px 0 2px #f600dd, 1px 0 0 2px #f600dd;
+}
+
+.secondary {
+  -webkit-box-shadow: -1px 0 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, 0 -1px 0 2px #9a4dff, 0 1px 0 2px #f600dd, 1px -1px 0 2px #f600dd, 1px 1px 0 2px #f600dd, 1px 0 0 2px #f600dd;
+          box-shadow: -1px 0 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, 0 -1px 0 2px #9a4dff, 0 1px 0 2px #f600dd, 1px -1px 0 2px #f600dd, 1px 1px 0 2px #f600dd, 1px 0 0 2px #f600dd;
+}
+
+.secondary:hover {
+  background: linear-gradient(135deg, #9a4dff 0%, #f600dd 100%);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.icon span {
+  margin-right: 12px;
+}
+
+.ellipse-top {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  left: 284px;
+  top: -124px;
+  background: #9a4dff;
+  -webkit-filter: blur(300px);
+          filter: blur(300px);
+  border-radius: 50%;
+}
+
+.ellipse-bottom {
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  left: -181px;
+  top: 668px;
+  background: #9a4dff;
+  -webkit-filter: blur(300px);
+          filter: blur(300px);
+  border-radius: 50%;
 }
 /*# sourceMappingURL=styles.css.map */
