@@ -82,10 +82,12 @@ h4,
 h5,
 h6 {
   font-weight: bold;
+  color: $white;
 }
 
 p {
   @include typeface-body(default, mobile);
+  color: $white;
 
   &.large {
     @include typeface-body(large, mobile);

@@ -1,21 +1,71 @@
-.ellipse-top {
-  position: absolute;
-  width: 260px;
-  height: 260px;
-  left: 284px;
-  top: -124px;
-  background: $primary-500;
-  filter: blur(300px);
-  border-radius: 50%;
-}
+.s-login {
+  .ellipse-top,
+  .ellipse-bottom {
+    position: absolute;
+    pointer-events: none;
+    width: 86rem;
+    height: 86rem;
+  }
+  .ellipse-top {
+    right: -50rem;
+    top: -40rem;
+    background: url(../../assets/img/ellipse-top.png) center center no-repeat;
+  }
 
-.ellipse-bottom {
-  position: absolute;
-  width: 270px;
-  height: 270px;
-  left: -181px;
-  top: 668px;
-  background: $primary-500;
-  filter: blur(300px);
-  border-radius: 50%;
+  .ellipse-bottom {
+    left: -50rem;
+    bottom: -40rem;
+    background: url(../../assets/img/ellipse-bottom.png) center center no-repeat;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 2.4rem;
+  }
+
+  .icon-crypto {
+    width: 15.3rem;
+    height: 15.3rem;
+    margin: 8.8rem auto 0;
+  }
+
+  .text {
+    text-align: center;
+
+    p {
+      margin: 0.4rem 0 3.2rem;
+      opacity: 0.5;
+    }
+  }
+
+  .inputs {
+    .input-container {
+      &:first-child {
+        border-radius: 12px 12px 0px 0px;
+      }
+
+      &:last-child {
+        border-radius: 0px 0px 12px 12px;
+      }
+    }
+  }
+
+  .recover-password {
+    margin: 0.8rem 0 3.2rem;
+    p {
+      text-align: right;
+      font-weight: bold;
+      background: $gradient-1;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .divider {
+    width: 100%;
+    max-width: 18rem;
+    height: 1px;
+    background: $border;
+    margin: 4.8rem auto;
+  }
 }

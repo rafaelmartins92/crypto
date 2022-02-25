@@ -13,37 +13,77 @@
     <link rel="stylesheet" href="./scss/styles.css" />
     <title>Rafael Martins | Crypto</title>
   </head>
-  <body>
-    <span class="ellipse-top"></span>
-    <span class="ellipse-bottom"></span>
-    <button class="primary">Botão</button>
-    <button class="primary small">Botão</button>
-    <button class="primary large">Botão</button>
-    <button class="secondary">Botão</button>
-    <button class="secondary small">Botão</button>
-    <button class="secondary large">Botão</button>
-    <button class="secondary icon">
-      <span>Botão</span> <img src="./assets/icons/metamask.svg" alt="" />
-    </button>
-    <button class="secondary icon small">
-      <span>Botão</span> <img src="./assets/icons/metamask.svg" alt="" />
-    </button>
-    <button class="secondary icon large">
-      <span>Botão</span> <img src="./assets/icons/metamask.svg" alt="" />
-    </button>
-    <div class="input-container">
-      <div class="input-wrapper">
-        <img src="./assets/icons/user.svg" alt="" />
-        <input type="text" placeholder="Login" />
+  <body class="root-element">
+    <section class="s-login animate-in" id="login">
+      <div class="container">
+        <div class="icon">
+          <img src="./assets/icons/crypto.svg" alt="" class="icon-crypto" />
+        </div>
+
+        <div class="text">
+          <h4>Crypto</h4>
+          <p class="small">O maior marketplace de NFTs do Brasil</p>
+        </div>
+
+        <div class="inputs">
+          <div class="input-container">
+            <div class="input-wrapper">
+              <img src="./assets/icons/user.svg" alt="" />
+              <input type="text" placeholder="Login" />
+            </div>
+          </div>
+
+          <div class="input-container">
+            <div class="input-wrapper">
+              <img src="./assets/icons/locker.svg" alt="" />
+              <input type="password" placeholder="Senha" />
+            </div>
+            <img src="./assets/icons/eye.svg" alt="" />
+          </div>
+        </div>
+
+        <div class="recover-password">
+          <p class="small">recuperar a senha?</p>
+        </div>
+
+        <a href="#feed">
+          <button class="primary small">Entrar</button>
+        </a>
+
+        <hr class="divider" />
+
+        <a href="#feed">
+          <button class="secondary icon small">
+            <span>Entrar com Metamask</span>
+            <img src="./assets/icons/metamask.svg" alt="" />
+          </button>
+        </a>
+
+        <div class="ellipse-top"></div>
+        <div class="ellipse-bottom"></div>
       </div>
-      <img src="./assets/icons/eye.svg" alt="">
-    </div>
-    <div class="input-container active">
-      <div class="input-wrapper">
-        <img src="./assets/icons/user.svg" alt="" />
-        <input type="text" placeholder="Login" />
-      </div>
-      <img src="./assets/icons/eye.svg" alt="">
-    </div>
+    </section>
+
+    <section class="s-feed animate-in" id="feed">
+      <h1>Feed</h1>
+      <a href="#login">Click here to get to Login.</a>
+    </section>
+
+    <script>
+      // Reindex page
+      document.location.hash = "#login";
+
+      // Smooth pages transition
+      window.addEventListener("beforeunload", function () {
+        document.body.classList.add("animate-out");
+      });
+      
+      // Get device view height
+      // const rootElement = document.querySelector(".root-element");
+      // const viewPortH = rootElement.getBoundingClientRect().height;
+      // const windowH = window.innerHeight;
+      // const browserUiBarsH = viewPortH - windowH;
+      // rootElement.style.height = `calc(100vh - ${browserUiBarsH}px)`;
+    </script>
   </body>
 </html>

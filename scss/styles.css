@@ -33,6 +33,37 @@ html {
   font-size: 62.5%;
 }
 
+#login {
+  display: none;
+}
+
+#login:target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#feed {
+  display: none;
+}
+
+#feed:target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
 h1 {
   font-size: 5.6rem;
   line-height: 6.4rem;
@@ -70,11 +101,13 @@ h4,
 h5,
 h6 {
   font-weight: bold;
+  color: #ffffff;
 }
 
 p {
   font-size: 1.6rem;
   line-height: 2.4rem;
+  color: #ffffff;
 }
 
 p.large {
@@ -98,6 +131,35 @@ p.subtitle {
   font-weight: 500;
 }
 
+.animate-in {
+  -webkit-animation: fadeIn 0.5s ease-in;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.animate-out {
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 button {
   font-weight: bold;
   font-size: 1.6rem;
@@ -114,6 +176,7 @@ button {
           align-items: center;
   padding: 1.2rem 0.8rem;
   width: 100%;
+  height: 4.8rem;
   border-radius: 12px;
 }
 
@@ -133,19 +196,30 @@ button.primary {
 
 button.primary:hover {
   background: none;
-  -webkit-box-shadow: -1px 0 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, 0 -1px 0 2px #9a4dff, 0 1px 0 2px #f600dd, 1px -1px 0 2px #f600dd, 1px 1px 0 2px #f600dd, 1px 0 0 2px #f600dd;
-          box-shadow: -1px 0 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, 0 -1px 0 2px #9a4dff, 0 1px 0 2px #f600dd, 1px -1px 0 2px #f600dd, 1px 1px 0 2px #f600dd, 1px 0 0 2px #f600dd;
+  -webkit-box-shadow: -1px 0 0 2px #9a4dff inset, -1px -1px 0 2px #9a4dff inset, -1px -1px 0 2px #9a4dff inset, 0 -1px 0 2px #9a4dff inset, 0 1px 0 2px #f600dd inset, 1px -1px 0 2px #f600dd inset, 1px 1px 0 2px #f600dd inset, 1px 0 0 2px #f600dd inset;
+          box-shadow: -1px 0 0 2px #9a4dff inset, -1px -1px 0 2px #9a4dff inset, -1px -1px 0 2px #9a4dff inset, 0 -1px 0 2px #9a4dff inset, 0 1px 0 2px #f600dd inset, 1px -1px 0 2px #f600dd inset, 1px 1px 0 2px #f600dd inset, 1px 0 0 2px #f600dd inset;
 }
 
 button.secondary {
-  -webkit-box-shadow: -1px 0 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, 0 -1px 0 2px #9a4dff, 0 1px 0 2px #f600dd, 1px -1px 0 2px #f600dd, 1px 1px 0 2px #f600dd, 1px 0 0 2px #f600dd;
-          box-shadow: -1px 0 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, 0 -1px 0 2px #9a4dff, 0 1px 0 2px #f600dd, 1px -1px 0 2px #f600dd, 1px 1px 0 2px #f600dd, 1px 0 0 2px #f600dd;
+  -webkit-box-shadow: -1px 0 0 2px #9a4dff inset, -1px -1px 0 2px #9a4dff inset, -1px -1px 0 2px #9a4dff inset, 0 -1px 0 2px #9a4dff inset, 0 1px 0 2px #f600dd inset, 1px -1px 0 2px #f600dd inset, 1px 1px 0 2px #f600dd inset, 1px 0 0 2px #f600dd inset;
+          box-shadow: -1px 0 0 2px #9a4dff inset, -1px -1px 0 2px #9a4dff inset, -1px -1px 0 2px #9a4dff inset, 0 -1px 0 2px #9a4dff inset, 0 1px 0 2px #f600dd inset, 1px -1px 0 2px #f600dd inset, 1px 1px 0 2px #f600dd inset, 1px 0 0 2px #f600dd inset;
+}
+
+button.secondary span {
+  background: linear-gradient(135deg, #9a4dff 0%, #f600dd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 button.secondary:hover {
   background: linear-gradient(135deg, #9a4dff 0%, #f600dd 100%);
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+button.secondary:hover span {
+  background: none;
+  -webkit-text-fill-color: unset;
 }
 
 button.icon span {
@@ -178,8 +252,8 @@ button.icon span {
 
 .input-container:hover {
   border: none;
-  -webkit-box-shadow: -1px 0 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, 0 -1px 0 2px #9a4dff, 0 1px 0 2px #f600dd, 1px -1px 0 2px #f600dd, 1px 1px 0 2px #f600dd, 1px 0 0 2px #f600dd;
-          box-shadow: -1px 0 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, -1px -1px 0 2px #9a4dff, 0 -1px 0 2px #9a4dff, 0 1px 0 2px #f600dd, 1px -1px 0 2px #f600dd, 1px 1px 0 2px #f600dd, 1px 0 0 2px #f600dd;
+  -webkit-box-shadow: -1px 0 0 2px #9a4dff inset, -1px -1px 0 2px #9a4dff inset, -1px -1px 0 2px #9a4dff inset, 0 -1px 0 2px #9a4dff inset, 0 1px 0 2px #f600dd inset, 1px -1px 0 2px #f600dd inset, 1px 1px 0 2px #f600dd inset, 1px 0 0 2px #f600dd inset;
+          box-shadow: -1px 0 0 2px #9a4dff inset, -1px -1px 0 2px #9a4dff inset, -1px -1px 0 2px #9a4dff inset, 0 -1px 0 2px #9a4dff inset, 0 1px 0 2px #f600dd inset, 1px -1px 0 2px #f600dd inset, 1px 1px 0 2px #f600dd inset, 1px 0 0 2px #f600dd inset;
 }
 
 .input-wrapper {
@@ -227,27 +301,71 @@ button.icon span {
   color: #ffffff;
 }
 
-.ellipse-top {
+.s-login .ellipse-top,
+.s-login .ellipse-bottom {
   position: absolute;
-  width: 260px;
-  height: 260px;
-  left: 284px;
-  top: -124px;
-  background: #9a4dff;
-  -webkit-filter: blur(300px);
-          filter: blur(300px);
-  border-radius: 50%;
+  pointer-events: none;
+  width: 86rem;
+  height: 86rem;
 }
 
-.ellipse-bottom {
-  position: absolute;
-  width: 270px;
-  height: 270px;
-  left: -181px;
-  top: 668px;
-  background: #9a4dff;
-  -webkit-filter: blur(300px);
-          filter: blur(300px);
-  border-radius: 50%;
+.s-login .ellipse-top {
+  right: -50rem;
+  top: -40rem;
+  background: url(../../assets/img/ellipse-top.png) center center no-repeat;
+}
+
+.s-login .ellipse-bottom {
+  left: -50rem;
+  bottom: -40rem;
+  background: url(../../assets/img/ellipse-bottom.png) center center no-repeat;
+}
+
+.s-login .container {
+  width: 100%;
+  padding: 0 2.4rem;
+}
+
+.s-login .icon-crypto {
+  width: 15.3rem;
+  height: 15.3rem;
+  margin: 8.8rem auto 0;
+}
+
+.s-login .text {
+  text-align: center;
+}
+
+.s-login .text p {
+  margin: 0.4rem 0 3.2rem;
+  opacity: 0.5;
+}
+
+.s-login .inputs .input-container:first-child {
+  border-radius: 12px 12px 0px 0px;
+}
+
+.s-login .inputs .input-container:last-child {
+  border-radius: 0px 0px 12px 12px;
+}
+
+.s-login .recover-password {
+  margin: 0.8rem 0 3.2rem;
+}
+
+.s-login .recover-password p {
+  text-align: right;
+  font-weight: bold;
+  background: linear-gradient(135deg, #9a4dff 0%, #f600dd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.s-login .divider {
+  width: 100%;
+  max-width: 18rem;
+  height: 1px;
+  background: #474053;
+  margin: 4.8rem auto;
 }
 /*# sourceMappingURL=styles.css.map */

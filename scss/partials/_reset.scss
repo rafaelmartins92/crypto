@@ -32,3 +32,24 @@ html {
   font-size: 62.5%;
 }
 
+.root-element {
+  // height: 100vh;
+}
+
+#login {
+  display: none;
+}
+#login:target {
+  display: flex;
+}
+
+#feed {
+  display: none;
+}
+#feed:target {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}

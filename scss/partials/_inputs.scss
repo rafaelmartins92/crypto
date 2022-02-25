@@ -14,11 +14,14 @@
 
   &:hover {
     border: none;
-    box-shadow: -1px 0 0 2px rgba(154, 77, 255, 1),
-      -1px -1px 0 2px rgba(154, 77, 255, 1),
-      -1px -1px 0 2px rgba(154, 77, 255, 1), 0 -1px 0 2px rgba(154, 77, 255, 1),
-      0 1px 0 2px rgba(246, 0, 221, 1), 1px -1px 0 2px rgba(246, 0, 221, 1),
-      1px 1px 0 2px rgba(246, 0, 221, 1), 1px 0 0 2px rgba(246, 0, 221, 1);
+    box-shadow: -1px 0 0 2px rgba(154, 77, 255, 1) inset,
+      -1px -1px 0 2px rgba(154, 77, 255, 1) inset,
+      -1px -1px 0 2px rgba(154, 77, 255, 1) inset,
+      0 -1px 0 2px rgba(154, 77, 255, 1) inset,
+      0 1px 0 2px rgba(246, 0, 221, 1) inset,
+      1px -1px 0 2px rgba(246, 0, 221, 1) inset,
+      1px 1px 0 2px rgba(246, 0, 221, 1) inset,
+      1px 0 0 2px rgba(246, 0, 221, 1) inset;
   }
 }
 
