@@ -17,7 +17,11 @@
     <section class="s-login animate-in" id="login">
       <div class="container">
         <div class="icon">
-          <img src="./assets/icons/crypto.svg" alt="" class="icon-crypto" />
+          <img
+            src="./assets/icons/crypto-logo.svg"
+            alt=""
+            class="icon-crypto"
+          />
         </div>
 
         <div class="text">
@@ -65,8 +69,53 @@
     </section>
 
     <section class="s-feed animate-in" id="feed">
-      <h1>Feed</h1>
-      <a href="#login">Click here to get to Login.</a>
+      <div class="container">
+        <div class="header">
+          <a href="#login">
+            <img src="./assets/icons/crypto.svg" alt="" />
+          </a>
+          <img src="./assets/icons/hamburguer.svg" alt="" />
+        </div>
+        <div class="search-bar">
+          <div class="input-wrapper search">
+            <img src="./assets/icons/search.svg" alt="" />
+            <input
+              type="text"
+              placeholder="Pesquise por categorias, artistas..."
+              class="search"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="tabs">
+        <div class="tab active">Todos</div>
+        <div class="tab">3D</div>
+        <div class="tab">2D</div>
+        <div class="tab">GIFs</div>
+        <div class="tab">Ilustração</div>
+        <div class="tab">3D</div>
+        <div class="tab">2D</div>
+        <div class="tab">GIFs</div>
+        <div class="tab">Ilustração</div>
+      </div>
+
+      <div class="navigation">
+        <a href="#login">
+          <img src="./assets/icons/crypto.svg" alt="" />
+        </a>
+        <a href="#login">
+          <img src="./assets/icons/wallet.svg" alt="" />
+        </a>
+        <a href="#login">
+          <img src="./assets/icons/circle.svg" alt="" class="circle" />
+        </a>
+        <a href="#login">
+          <img src="./assets/icons/rank.svg" alt="" />
+        </a>
+        <a href="#login">
+          <img src="./assets/icons/user.svg" alt="" />
+        </a>
+      </div>
     </section>
 
     <script>
@@ -77,13 +126,13 @@
       window.addEventListener("beforeunload", function () {
         document.body.classList.add("animate-out");
       });
-      
+
       // Get device view height
-      // const rootElement = document.querySelector(".root-element");
-      // const viewPortH = rootElement.getBoundingClientRect().height;
-      // const windowH = window.innerHeight;
-      // const browserUiBarsH = viewPortH - windowH;
-      // rootElement.style.height = `calc(100vh - ${browserUiBarsH}px)`;
+      const rootElement = document.querySelector(".root-element");
+      const viewPortH = rootElement.getBoundingClientRect().height;
+      const windowH = window.innerHeight;
+      const browserUiBarsH = viewPortH - windowH;
+      rootElement.style.height = `calc(100vh - ${browserUiBarsH}px)`;
     </script>
   </body>
 </html>

@@ -31,6 +31,7 @@
   img {
     filter: brightness(0) invert(1);
     margin-right: 0.8rem;
+    width: 2.4rem;
   }
 
   input {
@@ -39,6 +40,12 @@
     font-size: 1.4rem;
     line-height: 1.7rem;
     color: rgba(239, 239, 255, 0.5);
+    width: 100%;
+
+    &.search {
+      font-weight: normal;
+      background: none;
+    }
   }
 
   &:hover {
@@ -54,4 +61,11 @@
       }
     }
   }
+}
+
+.search-bar {
+  padding: 8px 12px 8px 8px;
+  background: rgba(239, 239, 255, 0.1);
+  border: 1px solid $border;
+  border-radius: 24px;
 }
