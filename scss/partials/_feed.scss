@@ -64,10 +64,6 @@
         background: url("../../assets/img/8.jpeg") left top no-repeat;
       }
 
-      &:not(:first-child) {
-        margin-top: 2.4rem;
-      }
-
       .card-info {
         position: absolute;
         left: 0;
@@ -113,25 +109,10 @@
         }
       }
     }
-  }
 
-  .navigation {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 1.2rem 2.4rem;
-    border-top: 1px solid $border;
-    background-color: $background;
-
-    img {
-      width: 4rem;
-
-      &.circle {
-        width: 100%;
-      }
+    a:not(:first-child) {
+      display: block;
+      margin-top: 2.4rem;
     }
   }
 }

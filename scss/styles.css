@@ -64,6 +64,90 @@ html {
   gap: 20px;
 }
 
+#pdp {
+  display: none;
+}
+
+#pdp:target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+#wallet {
+  display: none;
+}
+
+#wallet:target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+#ranking {
+  display: none;
+}
+
+#ranking:target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+#user {
+  display: none;
+}
+
+#user:target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
 h1 {
   font-size: 5.6rem;
   line-height: 6.4rem;
@@ -335,6 +419,32 @@ button.icon span {
           box-shadow: -1px 0 0 2px #9a4dff inset, -1px -1px 0 2px #9a4dff inset, -1px -1px 0 2px #9a4dff inset, 0 -1px 0 2px #9a4dff inset, 0 1px 0 2px #f600dd inset, 1px -1px 0 2px #f600dd inset, 1px 1px 0 2px #f600dd inset, 1px 0 0 2px #f600dd inset;
 }
 
+.navigation {
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 1.2rem 2.4rem;
+  border-top: 1px solid #474053;
+  background-color: #211d28;
+}
+
+.navigation img {
+  width: 4rem;
+}
+
+.navigation img.circle {
+  width: 100%;
+}
+
 .s-login .ellipse-top,
 .s-login .ellipse-bottom {
   position: absolute;
@@ -489,10 +599,6 @@ button.icon span {
   background: url("../../assets/img/8.jpeg") left top no-repeat;
 }
 
-.s-feed .feed .card-container:not(:first-child) {
-  margin-top: 2.4rem;
-}
-
 .s-feed .feed .card-container .card-info {
   position: absolute;
   left: 0;
@@ -549,29 +655,8 @@ button.icon span {
   color: #ffa7ff;
 }
 
-.s-feed .navigation {
-  position: absolute;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  padding: 1.2rem 2.4rem;
-  border-top: 1px solid #474053;
-  background-color: #211d28;
-}
-
-.s-feed .navigation img {
-  width: 4rem;
-}
-
-.s-feed .navigation img.circle {
-  width: 100%;
+.s-feed .feed a:not(:first-child) {
+  display: block;
+  margin-top: 2.4rem;
 }
 /*# sourceMappingURL=styles.css.map */
