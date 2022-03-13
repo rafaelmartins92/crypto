@@ -435,9 +435,118 @@ button.icon span {
       -ms-flex-align: center;
           align-items: center;
   margin: 2.4rem 0;
-  overflow-y: scroll;
+  overflow-x: scroll;
   width: 100%;
   padding: 0 2.4rem;
+}
+
+.s-feed .feed {
+  overflow-y: scroll;
+  height: 100vh;
+  padding-bottom: 38.2rem;
+}
+
+.s-feed .feed .card-container {
+  height: 36.8rem;
+  position: relative;
+  border-radius: 12px;
+  background-size: cover !important;
+}
+
+.s-feed .feed .card-container.card-0 {
+  background: url("../../assets/img/0.jpeg") left top no-repeat;
+}
+
+.s-feed .feed .card-container.card-1 {
+  background: url("../../assets/img/1.jpeg") left top no-repeat;
+}
+
+.s-feed .feed .card-container.card-2 {
+  background: url("../../assets/img/2.jpeg") left top no-repeat;
+}
+
+.s-feed .feed .card-container.card-3 {
+  background: url("../../assets/img/3.jpeg") left top no-repeat;
+}
+
+.s-feed .feed .card-container.card-4 {
+  background: url("../../assets/img/4.jpeg") left top no-repeat;
+}
+
+.s-feed .feed .card-container.card-5 {
+  background: url("../../assets/img/5.jpeg") left top no-repeat;
+}
+
+.s-feed .feed .card-container.card-6 {
+  background: url("../../assets/img/6.jpeg") left top no-repeat;
+}
+
+.s-feed .feed .card-container.card-7 {
+  background: url("../../assets/img/7.jpeg") left top no-repeat;
+}
+
+.s-feed .feed .card-container.card-8 {
+  background: url("../../assets/img/8.jpeg") left top no-repeat;
+}
+
+.s-feed .feed .card-container:not(:first-child) {
+  margin-top: 2.4rem;
+}
+
+.s-feed .feed .card-container .card-info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 1.6rem 2.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.01);
+  -webkit-backdrop-filter: blur(28px);
+          backdrop-filter: blur(28px);
+  border-radius: 0 0 12px 12px;
+}
+
+.s-feed .feed .card-container .card-info .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.s-feed .feed .card-container .card-info .user .avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.s-feed .feed .card-container .card-info .user .avatar img {
+  border-radius: 50%;
+  width: 4.8rem;
+  height: 4.8rem;
+  margin-right: 1.2rem;
+}
+
+.s-feed .feed .card-container .card-info .user .name .caption {
+  color: #ffa7ff;
+}
+
+.s-feed .feed .card-container .card-info .price {
+  text-align: right;
+}
+
+.s-feed .feed .card-container .card-info .price .caption {
+  color: #ffa7ff;
 }
 
 .s-feed .navigation {
@@ -455,6 +564,7 @@ button.icon span {
   width: 100%;
   padding: 1.2rem 2.4rem;
   border-top: 1px solid #474053;
+  background-color: #211d28;
 }
 
 .s-feed .navigation img {
