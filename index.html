@@ -295,7 +295,175 @@
 
     <!-- PDP -->
     <section class="s-pdp animate-in" id="pdp">
-      <h1>pdp</h1>
+      <div class="scroll">
+        <div class="nft-art">
+          <img src="./assets/img/0.jpeg" alt="" class="nft-image" />
+          <a href="#feed">
+            <img src="./assets/icons/close.svg" alt="" class="close-button" />
+          </a>
+        </div>
+
+        <div class="nft-name container">
+          <h6>#2345</h6>
+          <h3>Buz Sheep</h3>
+        </div>
+
+        <div class="owner">
+          <div class="user">
+            <div class="avatar">
+              <img src="./assets/img/0.jpeg" alt="" />
+            </div>
+            <div class="name">
+              <p class="caption">Owned by</p>
+              <p class="large">Buz Sheep</p>
+            </div>
+          </div>
+          <div class="follow">
+            <button class="secondary small">
+              <span>Seguir</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="bids container">
+          <p>Últimos Lances</p>
+
+          <div class="bids-list">
+            <div class="bid">
+              <div class="user">
+                <div class="avatar">
+                  <img src="./assets/img/1.jpeg" alt="" />
+                  <img
+                    src="./assets/icons/verified.svg"
+                    alt=""
+                    class="verified"
+                  />
+                </div>
+                <div class="name">
+                  <p class="large">Angel</p>
+                </div>
+              </div>
+              <div class="price">
+                <p class="large">0.8 ETH</p>
+                <p class="caption">2h atrás</p>
+              </div>
+            </div>
+            <div class="bid">
+              <div class="user">
+                <div class="avatar">
+                  <img src="./assets/img/2.jpeg" alt="" />
+                </div>
+                <div class="name">
+                  <p class="large">Arthur</p>
+                </div>
+              </div>
+              <div class="price">
+                <p class="large">0.72 ETH</p>
+                <p class="caption">3h atrás</p>
+              </div>
+            </div>
+            <div class="bid">
+              <div class="user">
+                <div class="avatar">
+                  <img src="./assets/img/3.jpeg" alt="" />
+                  <img
+                    src="./assets/icons/verified.svg"
+                    alt=""
+                    class="verified"
+                  />
+                </div>
+                <div class="name">
+                  <p class="large">Darlene</p>
+                </div>
+              </div>
+              <div class="price">
+                <p class="large">0.61 ETH</p>
+                <p class="caption">5h atrás</p>
+              </div>
+            </div>
+            <div class="bid">
+              <div class="user">
+                <div class="avatar">
+                  <img src="./assets/img/4.jpeg" alt="" />
+                </div>
+                <div class="name">
+                  <p class="large">Arlene</p>
+                </div>
+              </div>
+              <div class="price">
+                <p class="large">0.52 ETH</p>
+                <p class="caption">22h atrás</p>
+              </div>
+            </div>
+            <div class="bid animate-in hide">
+              <div class="user">
+                <div class="avatar">
+                  <img src="./assets/img/5.jpeg" alt="" />
+                </div>
+                <div class="name">
+                  <p class="large">Angel</p>
+                </div>
+              </div>
+              <div class="price">
+                <p class="large">0.8 ETH</p>
+                <p class="caption">2h atrás</p>
+              </div>
+            </div>
+            <div class="bid animate-in hide">
+              <div class="user">
+                <div class="avatar">
+                  <img src="./assets/img/6.jpeg" alt="" />
+                </div>
+                <div class="name">
+                  <p class="large">Arthur</p>
+                </div>
+              </div>
+              <div class="price">
+                <p class="large">0.72 ETH</p>
+                <p class="caption">3h atrás</p>
+              </div>
+            </div>
+            <div class="bid animate-in hide">
+              <div class="user">
+                <div class="avatar">
+                  <img src="./assets/img/7.jpeg" alt="" />
+                  <img
+                    src="./assets/icons/verified.svg"
+                    alt=""
+                    class="verified"
+                  />
+                </div>
+                <div class="name">
+                  <p class="large">Darlene</p>
+                </div>
+              </div>
+              <div class="price">
+                <p class="large">0.61 ETH</p>
+                <p class="caption">5h atrás</p>
+              </div>
+            </div>
+            <div class="bid animate-in hide">
+              <div class="user">
+                <div class="avatar">
+                  <img src="./assets/img/8.jpeg" alt="" />
+                </div>
+                <div class="name">
+                  <p class="large">Arlene</p>
+                </div>
+              </div>
+              <div class="price">
+                <p class="large">0.52 ETH</p>
+                <p class="caption">22h atrás</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="secondary show-more">
+            <span>Ver mais</span>
+            <span class="animate-in hide">Ver menos</span>
+          </button>
+        </div>
+      </div>
 
       <div class="navigation">
         <a href="#login">
@@ -400,6 +568,19 @@
       const windowH = window.innerHeight;
       const browserUiBarsH = viewPortH - windowH;
       rootElement.style.height = `calc(100vh - ${browserUiBarsH}px)`;
+
+      // Show more bids
+      const bids = document.querySelectorAll(".bid.animate-in");
+      const btnShowMore = document.querySelector(".show-more");
+      const btnText = document.querySelectorAll(".show-more span");
+      btnShowMore.addEventListener("click", function () {
+        bids.forEach((bid) => {
+          bid.classList.toggle("hide");
+        });
+        btnText.forEach((btn) => {
+          btn.classList.toggle("hide");
+        });
+      });
     </script>
   </body>
 </html>
