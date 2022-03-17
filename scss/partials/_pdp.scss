@@ -158,4 +158,37 @@
       }
     }
   }
+
+  .bid-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .number {
+      display: flex;
+      border: 2px solid $border;
+      border-radius: 8px;
+      padding: 1.2rem;
+    }
+
+    .bid-value {
+      margin: 0 20px;
+      width: 60px;
+      display: flex;
+    }
+
+    span {
+      cursor: pointer;
+    }
+
+    input {
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      text-align: center;
+      color: $primary-900;
+      background: transparent;
+      width: 3rem;
+    }
+  }
 }

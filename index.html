@@ -94,11 +94,9 @@
         <div class="tab">3D</div>
         <div class="tab">2D</div>
         <div class="tab">GIFs</div>
-        <div class="tab">Ilustração</div>
-        <div class="tab">3D</div>
-        <div class="tab">2D</div>
-        <div class="tab">GIFs</div>
-        <div class="tab">Ilustração</div>
+        <div class="tab">People</div>
+        <div class="tab">Animals</div>
+        <div class="tab">Animes</div>
       </div>
       <div class="container feed">
         <a href="#pdp">
@@ -463,6 +461,18 @@
             <span class="animate-in hide">Ver menos</span>
           </button>
         </div>
+
+        <div class="bid-price">
+          <div class="number">
+            <span class="minus"><img src="./assets/icons/minus.svg" alt="" /></span>
+            <div class="bid-value">
+              <input type="text" id="price-eth" value="1" />
+              <input type="text" id="name-eth" value="ETH" readonly="readonly" />
+            </div>
+            <span class="plus"><img src="./assets/icons/plus.svg" alt="" /></span>
+          </div>
+        </div>
+        
       </div>
 
       <div class="navigation">
@@ -552,7 +562,12 @@
         </a>
       </div>
     </section>
-
+   
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <script>
       // Reindex page
       document.location.hash = "#login";
@@ -579,6 +594,23 @@
         });
         btnText.forEach((btn) => {
           btn.classList.toggle("hide");
+        });
+      });
+
+      $(document).ready(function () {
+        $(".minus").click(function () {
+          var $input = $(this).parent().find("input#price-eth");
+          var count = parseInt($input.val()) - 1;
+          count = count < 1 ? 1 : count;
+          $input.val(count);
+          $input.change();
+          return false;
+        });
+        $(".plus").click(function () {
+          var $input = $(this).parent().find("input#price-eth");
+          $input.val(parseInt($input.val()) + 1);
+          $input.change();
+          return false;
         });
       });
     </script>
